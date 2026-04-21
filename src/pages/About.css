@@ -1,0 +1,423 @@
+.about-split-view {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.about-container {
+    flex: 1;
+    margin: 0;
+    padding: 40px;
+    min-height: auto;
+    width: auto;
+}
+
+.about-layout.centered {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.about-right {
+    width: 100%;
+}
+
+/* Journey V2 Styles for Split View */
+.journey-section {
+    flex: 1.2;
+}
+
+.journey-title-v2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    border-bottom: 2px solid var(--accent-secondary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.journey-grid-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.journey-card-wrapper-v2 {
+    position: relative;
+    border-radius: 18px;
+    padding: 2px;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.25);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.journey-card-wrapper-v2::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(249, 220, 215, 0.6),
+        transparent 30%,
+        #00E5FF,
+        transparent 60%
+    );
+    animation: rotate-border 4s linear infinite;
+    z-index: -1;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.journey-card-wrapper-v2:hover {
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.4), 0 0 40px rgba(249, 220, 215, 0.3);
+}
+
+.journey-card-wrapper-v2:hover::before {
+    animation-duration: 8s;
+    opacity: 1;
+}
+
+@media (max-width: 1100px) {
+    .about-split-view {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .about-left-column, .about-container, .tools-container, .journey-section {
+        width: 100%;
+        flex: none;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .journey-grid-v2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .info-split-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .info-name {
+        font-size: 1.6rem;
+    }
+}
+
+
+.info-header {
+    margin-bottom: 25px;
+}
+
+.info-name {
+    font-size: 2rem;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    margin-bottom: 10px;
+}
+
+.prof-summary {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+    border-left: 3px solid var(--accent-secondary);
+    padding-left: 15px;
+}
+
+.info-section {
+    margin-top: 25px;
+}
+
+.info-section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-secondary);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-list li {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.expertise-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-secondary);
+}
+
+.info-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.capsule-list {
+    list-style: none;
+    padding: 0;
+}
+
+.capsule-list li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.capsule-list li::before {
+    content: "•";
+    color: var(--accent-primary);
+}
+
+
+.journey-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(to right, var(--text-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Futuristic Neon Rotating Border Cards for Journey Section */
+.journey-card-wrapper {
+    position: relative;
+    border-radius: 18px; /* Slightly larger than card for the border */
+    padding: 2px; /* This defines the border thickness */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1; /* Creates new stacking context */
+}
+
+/* The spinning gradient ring */
+.journey-card-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(249, 220, 215, 0.9),
+        transparent 30%,
+        #00E5FF,
+        transparent 60%
+    );
+    animation: rotate-border 4s linear infinite;
+    z-index: -1;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.journey-card-wrapper:hover {
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.4), 0 0 40px rgba(249, 220, 215, 0.3);
+}
+
+.journey-card-wrapper:hover::before {
+    animation-duration: 1.5s; /* Faster spin */
+    opacity: 1;
+}
+
+.journey-card-premium {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.4); /* Glassmorphism light shade like skills page */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+    z-index: 2;
+    height: 100%;
+}
+
+.journey-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.journey-year {
+    font-size: 0.9rem;
+    color: var(--accent-secondary);
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.journey-school {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.journey-institution {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.journey-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1;
+    /* Pushes content to fill the card height */
+}
+
+@media (max-width: 968px) {
+    .about-container {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .about-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+    .bento-content {
+        width: 100%;
+    }
+
+    /* Decorative classical element */
+    .bento-box::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        pointer-events: none;
+    }
+
+    .bento-title {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--text-primary);
+        border-bottom: 2px solid var(--accent-secondary);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
+
+    .info-label {
+        font-family: 'Playfair Display', serif;
+        font-size: 0.9rem;
+        color: var(--accent-secondary);
+        letter-spacing: 2px;
+    }
+
+    .info-value {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .info-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 12px;
+    }
+
+    .info-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Explicitly clear and style journey section for mobile */
+    .journey-section {
+        margin-top: 40px;
+        position: relative;
+        z-index: 1;
+        /* Ensure no overlap issues */
+        width: 100%;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .journey-card-premium {
+        background: rgba(255, 255, 255, 0.4);
+        border: none;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .journey-school {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+}

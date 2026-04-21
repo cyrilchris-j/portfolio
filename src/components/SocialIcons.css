@@ -1,0 +1,32 @@
+.social-icons-wrapper {
+    position: static;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 40px 0 60px 0;
+    background: transparent;
+}
+
+.social-icon-bubble {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.social-icon-bubble:hover {
+    background: rgba(0, 210, 255, 0.2);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}

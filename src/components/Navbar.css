@@ -1,0 +1,235 @@
+/* Navbar.css content + new rule */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    /* Border-like look at the bottom */
+    border-bottom: 2px solid rgba(0, 210, 255, 0.3);
+    /* Curved bottom corners to satisfy "curved shape" request */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+/* Hide Navbar when viewing certificate */
+body.certificates-view-active .navbar-container {
+    display: none !important;
+}
+
+.navbar-container:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom-color: rgba(0, 210, 255, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.15);
+}
+
+.navbar-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    background: rgba(255, 255, 255, 0.03);
+    /* Subtle glass */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Soft silver border */
+    border-radius: 50px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: var(--font-main);
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.navbar-bubble:hover {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: rgba(0, 210, 255, 0.5);
+    color: var(--text-primary);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.navbar-bubble.active {
+    background: linear-gradient(135deg, #00d2ff, #008cff);
+    /* Classic Electric Blue */
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 5px 20px rgba(0, 210, 255, 0.4);
+}
+
+.navbar-bubble-wrapper {
+    animation: nav-float 4s ease-in-out infinite;
+}
+
+.navbar-bubble-wrapper:nth-child(2n) {
+    animation-delay: 1s;
+}
+
+.navbar-bubble-wrapper:nth-child(3n) {
+    animation-delay: 2s;
+}
+
+@keyframes nav-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+    display: none;
+    /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-primary);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-primary);
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+/* Hamburger Animation */
+.hamburger.open {
+    background-color: transparent;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    pointer-events: auto;
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.mobile-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s forwards;
+}
+
+.mobile-link:hover,
+.mobile-link:active {
+    color: #00d2ff;
+    transform: scale(1.1);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 968px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .navbar-container {
+        padding: 20px 5%;
+    }
+}

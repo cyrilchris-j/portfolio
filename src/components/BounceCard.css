@@ -1,0 +1,11 @@
+.bounce-card-wrapper {
+    display: inline-block;
+    width: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Optional: Add a hover subtle interaction on top of the bounce */
+.bounce-card-wrapper:hover {
+    cursor: pointer;
+}

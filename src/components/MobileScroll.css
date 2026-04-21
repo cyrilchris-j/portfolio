@@ -1,0 +1,29 @@
+/* Helper styles for the Single Page Mobile Layout */
+@media (max-width: 968px) {
+    .mobile-scroll-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        margin-top: 80px;
+        /* Space for the fixed navbar */
+    }
+
+    /* Ensure each section takes up at least the viewport or appropriate space */
+    .mobile-scroll-layout section {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        /* Add padding/margin to separating sections visually if needed */
+        padding-bottom: 50px;
+    }
+
+    /* Reset some page-specific top paddings if they clash with the flow */
+    .page-container {
+        padding-top: 20px !important;
+        min-height: auto !important;
+        /* Let content dictate height in stack */
+    }
+
+    /* Ensure sections have a distinct separation if needed, or seamless flow */
+}

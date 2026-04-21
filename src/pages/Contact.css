@@ -1,0 +1,198 @@
+.contact-page {
+    background: transparent;
+}
+
+.contact-layout-classical {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.contact-info-section {
+    padding-top: 0;
+}
+
+.subsection-title {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    font-family: var(--font-heading);
+    height: 40px;
+    /* Force consistent height for alignment */
+    display: flex;
+    align-items: center;
+}
+
+.social-links-grid-classical {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 10px;
+    /* Slight offset to match form padding feel */
+}
+
+.social-item-classical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    border: 1.5px solid rgba(0, 170, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.social-item-classical:hover {
+    border-color: var(--accent-secondary);
+    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.social-item-classical .social-icon {
+    color: var(--accent-secondary);
+    margin-bottom: 12px;
+}
+
+.social-item-classical .social-name {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Form Styles */
+.contact-form-container-classical {
+    padding: 40px;
+    height: auto;
+    border: 1.5px solid rgba(0, 119, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 119, 255, 0.1);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.contact-form-container-classical .form-title {
+    display: none;
+    /* Already have 'Let's Connect' outside as a subsection-title */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 253, 245, 0.95);
+    border: 1.5px solid rgba(0, 119, 255, 0.15);
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: #333;
+    font-family: var(--font-main);
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-secondary);
+}
+
+.submit-btn-classical {
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    color: var(--text-primary);
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn-classical:disabled {
+    opacity: 0.6;
+}
+
+.status-msg {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.status-msg.success {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+}
+
+.status-msg.error {
+    background: rgba(248, 113, 113, 0.1);
+    color: #f87171;
+}
+
+.collaboration-quote {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.6;
+    border-left: 3px solid var(--accent-secondary);
+    padding-left: 20px;
+    background: linear-gradient(to right, rgba(0, 210, 255, 0.05), transparent);
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+
+.contact-footer-classical {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-footer-classical p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 968px) {
+    .contact-layout-classical {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form-container-classical {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links-grid-classical {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .social-item-classical {
+        padding: 20px 10px;
+    }
+}
