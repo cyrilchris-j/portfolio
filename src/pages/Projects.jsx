@@ -133,6 +133,13 @@ const Projects = () => {
             tag: "AI/ML / Voice",
             link: "https://logi-voice-assistant.vercel.app/",
             highlightType: "aiml"
+        },
+        {
+            title: "AI Roadmap Gen",
+            desc: "Logi is a voice-enabled AI assistant that interprets user commands and performs tasks seamlessly through natural interaction in real-time.",
+            tag: "AI / EdTech",
+            link: "https://ai-roadmap-generator-ten.vercel.app/",
+            highlightType: "startup"
         }
     ];
 
