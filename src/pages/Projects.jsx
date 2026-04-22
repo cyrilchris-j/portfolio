@@ -128,17 +128,10 @@ const Projects = () => {
             highlightType: "utility"
         },
         {
-            title: "Neural Nexus",
-            desc: "AI-powered data visualization platform with machine learning integration for advanced analytics and insights.",
-            tag: "AI/ML / Platform",
-            link: "#",
-            highlightType: "aiml"
-        },
-        {
-            title: "Neural Nexus",
-            desc: "AI-powered data visualization platform with machine learning integration for advanced analytics and insights.",
-            tag: "AI/ML / Platform",
-            link: "#",
+            title: "Logi Voice Assistant",
+            desc: "Advanced AI-powered voice interface developed for TN Impact Solution, featuring real-time speech processing and intelligent task automation.",
+            tag: "AI/ML / Voice",
+            link: "https://logi-voice-assistant.vercel.app/",
             highlightType: "aiml"
         }
     ];
