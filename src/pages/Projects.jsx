@@ -130,14 +130,7 @@ const Projects = () => {
             github: "https://github.com/cyrilchris-j/onestopalumni",
             highlightType: "hackathon"
         },
-        {
-            title: "Credit Score",
-            desc: "IIT Kanpur Hackathon solution for real-time corporate credit assessment using automated sentiment and news analysis.",
-            tag: "FinTech / Hackathon",
-            link: "https://cyrilchris-j.github.io/stocknew/",
-            github: "https://github.com/cyrilchris-j/stocknew",
-            highlightType: "fintech"
-        },
+       
         {
             title: "QuizSnap",
             desc: "Developed QuizSnap using React.js and modern frontend technologies to create an interactive real-time quiz platform with responsive design and smooth user experience.",
@@ -145,6 +138,14 @@ const Projects = () => {
             link: "https://quiz-snap.vercel.app/",
             github: "https://github.com/cyrilchris-j/cgpa",
             highlightType: "utility"
+        },
+         {
+            title: "ExpenseTracker",
+            desc: "Developed ExpenseTracker for real-time income and expense management with budgeting insights and transaction tracking.",
+            tag: "FinTech / Hackathon",
+            link: "https://cyrilchris-j.github.io/stocknew/",
+            github: "https://github.com/cyrilchris-j/stocknew",
+            highlightType: "fintech"
         },
         {
             title: "Logi Voice Assistant",
