@@ -118,8 +118,8 @@ const Projects = () => {
             title: "Napalgo",
             desc: "Next-gen student-driven IT initiative focused on real-world innovation and solutions.",
             tag: "Startup / IT",
-            link: "https://napalgo.github.io/web/",
-            github: "https://github.com/napalgo/web",
+            link: "https://cyrilchris-j.github.io/napalgo/",
+            github: "https://github.com/cyrilchris-j/napalgo",
             highlightType: "startup"
         },
         {
@@ -136,7 +136,7 @@ const Projects = () => {
             desc: "Developed QuizSnap using React.js and modern frontend technologies to create an interactive real-time quiz platform with responsive design and smooth user experience.",
             tag: "Utility / Tool",
             link: "https://quiz-snap.vercel.app/",
-            github: "https://github.com/cyrilchris-j/cgpa",
+            github: "https://github.com/cyrilchris-j/QuizSnap",
             highlightType: "utility"
         },
          {
