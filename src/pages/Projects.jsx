@@ -152,15 +152,15 @@ const Projects = () => {
             desc: "Advanced AI-powered voice interface developed for TN Impact Solution, featuring real-time speech processing and intelligent task automation.",
             tag: "AI/ML / Voice",
             link: "https://logi-voice-assistant.vercel.app/",
-            github: "https://github.com/cyrilchris-j/logi-voice-assistant",
+            github: "https://github.com/cyrilchris-j/LogiVoice-Assistant",
             highlightType: "aiml"
         },
         {
             title: "AI Roadmap Gen",
             desc: "Logi is a voice-enabled AI assistant that interprets user commands and performs tasks seamlessly through natural interaction in real-time.",
             tag: "AI / EdTech",
-            link: "https://ai-roadmap-generator-ten.vercel.app/",
-            github: "https://github.com/cyrilchris-j/ai-roadmap-generator",
+            link: "https://reminder-1-notes.web.app/",
+            github: "https://github.com/cyrilchris-j/reminder",
             highlightType: "startup"
         }
     ];
