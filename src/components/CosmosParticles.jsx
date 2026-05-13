@@ -9,7 +9,6 @@ const CosmosParticles = ({
     className
 }) => {
     const containerRef = useRef(null);
-    const animationRef = useRef(null);
 
     const hexToRgb = (hex) => {
         const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
