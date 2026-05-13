@@ -143,8 +143,8 @@ const Projects = () => {
             title: "ExpenseTracker",
             desc: "Developed ExpenseTracker for real-time income and expense management with budgeting insights and transaction tracking.",
             tag: "FinTech / Hackathon",
-            link: "https://cyrilchris-j.github.io/stocknew/",
-            github: "https://github.com/cyrilchris-j/stocknew",
+            link: "https://cyrilchris-j.github.io/expensetracker/",
+            github: "https://github.com/cyrilchris-j/expensetracker",
             highlightType: "fintech"
         },
         {
