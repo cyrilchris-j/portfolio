@@ -71,6 +71,7 @@
     background: rgba(255, 255, 255, 0.98) !important;
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 /* Glow Effect on Hover */
@@ -122,37 +123,78 @@
 }
 
 .project-footer {
-    margin-top: 20px;
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
 
 .project-btn-v2 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 14px 22px;
-    background: #000;
-    color: #fff;
+    justify-content: center;
     text-decoration: none;
     font-weight: 700;
     border-radius: 14px;
-    font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-arrow {
-    font-size: 1.3rem;
+.primary-btn {
+    flex: 1;
+    padding: 14px 22px;
+    background: #000;
+    color: #fff;
+    font-size: 0.95rem;
+    border: 2px solid #000;
+}
+
+.github-btn {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btn-icon {
+    margin-left: 8px;
     transition: transform 0.3s ease;
 }
 
-.project-btn-v2:hover {
-    background: #111;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.primary-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.project-btn-v2:hover .btn-arrow {
-    transform: translateX(6px);
+.primary-btn:hover .btn-icon {
+    transform: translate(3px, -3px);
+}
+
+.github-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px) rotate(12deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.github-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: -100%;
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.github-btn:hover::after {
+    left: 100%;
 }
 
 /* Highlight Variations - More intense colors */

@@ -1,4 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
 import "./Projects.css";
 
 const ProjectCard = ({ project, idx }) => {
@@ -84,12 +85,26 @@ const ProjectCard = ({ project, idx }) => {
                             href={project.link || "#"}
                             target={project.link === "#" ? "_self" : "_blank"}
                             rel="noopener noreferrer"
-                            className="project-btn-v2"
+                            className="project-btn-v2 primary-btn"
                             onClick={(e) => { if (project.link === "#") e.preventDefault(); }}
                         >
-                            {project.link === "#" ? "Coming Soon" : "View Project"}
-                            <span className="btn-arrow">→</span>
+                            <span className="btn-text">
+                                {project.link === "#" ? "Coming Soon" : "Live Demo"}
+                            </span>
+                            <ExternalLink size={18} className="btn-icon" />
                         </a>
+                        
+                        {project.github && (
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="project-btn-v2 github-btn"
+                                title="Source Code"
+                            >
+                                <Github size={20} />
+                            </a>
+                        )}
                     </div>
                 </motion.div>
             </motion.div>
@@ -104,6 +119,7 @@ const Projects = () => {
             desc: "Next-gen student-driven IT initiative focused on real-world innovation and solutions.",
             tag: "Startup / IT",
             link: "https://napalgo.github.io/web/",
+            github: "https://github.com/napalgo/web",
             highlightType: "startup"
         },
         {
@@ -111,6 +127,7 @@ const Projects = () => {
             desc: "Smart India Hackathon solution connecting college, alumni, and students for streamlined mentorship and networking.",
             tag: "SIH Solution / Web",
             link: "https://cyrilchris-j.github.io/onestopalumni/",
+            github: "https://github.com/cyrilchris-j/onestopalumni",
             highlightType: "hackathon"
         },
         {
@@ -118,6 +135,7 @@ const Projects = () => {
             desc: "IIT Kanpur Hackathon solution for real-time corporate credit assessment using automated sentiment and news analysis.",
             tag: "FinTech / Hackathon",
             link: "https://cyrilchris-j.github.io/stocknew/",
+            github: "https://github.com/cyrilchris-j/stocknew",
             highlightType: "fintech"
         },
         {
@@ -125,6 +143,7 @@ const Projects = () => {
             desc: "Streamlined engineering utility for tracking academic progress with semester-wise performance analytics.",
             tag: "Utility / Tool",
             link: "https://cyrilchris-j.github.io/cgpa/",
+            github: "https://github.com/cyrilchris-j/cgpa",
             highlightType: "utility"
         },
         {
@@ -132,6 +151,7 @@ const Projects = () => {
             desc: "Advanced AI-powered voice interface developed for TN Impact Solution, featuring real-time speech processing and intelligent task automation.",
             tag: "AI/ML / Voice",
             link: "https://logi-voice-assistant.vercel.app/",
+            github: "https://github.com/cyrilchris-j/logi-voice-assistant",
             highlightType: "aiml"
         },
         {
@@ -139,6 +159,7 @@ const Projects = () => {
             desc: "Logi is a voice-enabled AI assistant that interprets user commands and performs tasks seamlessly through natural interaction in real-time.",
             tag: "AI / EdTech",
             link: "https://ai-roadmap-generator-ten.vercel.app/",
+            github: "https://github.com/cyrilchris-j/ai-roadmap-generator",
             highlightType: "startup"
         }
     ];
