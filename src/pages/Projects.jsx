@@ -139,10 +139,10 @@ const Projects = () => {
             highlightType: "fintech"
         },
         {
-            title: "CGPA Calculator",
-            desc: "Streamlined engineering utility for tracking academic progress with semester-wise performance analytics.",
+            title: "QuizSnap",
+            desc: "Developed QuizSnap using React.js and modern frontend technologies to create an interactive real-time quiz platform with responsive design and smooth user experience.",
             tag: "Utility / Tool",
-            link: "https://cyrilchris-j.github.io/cgpa/",
+            link: "https://quiz-snap.vercel.app/",
             github: "https://github.com/cyrilchris-j/cgpa",
             highlightType: "utility"
         },
