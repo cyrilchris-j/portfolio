@@ -86,26 +86,79 @@
 }
 
 .project-tag-v2 {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent-primary);
+    letter-spacing: 3px;
+    color: #666;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.project-tag-v2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 1.5px;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+}
+
+.project-card-v2:hover .project-tag-v2::after {
+    width: 100%;
 }
 
 .status-badge {
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.65rem;
-    font-weight: 900;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.62rem;
+    font-weight: 800;
     text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.status-badge.cyan { background: #09090a; box-shadow: 0 4px 12px rgba(5, 5, 5, 0.3); }
-.status-badge.gold { background: #020202; box-shadow: 0 4px 12px rgba(7, 6, 5, 0.3); }
-.status-badge.purple { background: #020202; box-shadow: 0 4px 12px rgba(3, 2, 4, 0.3); }
+.status-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-badge.cyan { 
+    background: rgba(0, 242, 255, 0.05); 
+    color: #008891; 
+    border-color: rgba(0, 242, 255, 0.2);
+}
+.status-badge.cyan::before { background: #00f2ff; box-shadow: 0 0 10px #00f2ff; }
+
+.status-badge.gold { 
+    background: rgba(255, 184, 0, 0.05); 
+    color: #b38600; 
+    border-color: rgba(255, 184, 0, 0.2);
+}
+.status-badge.gold::before { background: #ffb800; box-shadow: 0 0 10px #ffb800; }
+
+.status-badge.purple { 
+    background: rgba(189, 0, 255, 0.05); 
+    color: #7a00a3; 
+    border-color: rgba(189, 0, 255, 0.2);
+}
+.status-badge.purple::before { background: #bd00ff; box-shadow: 0 0 10px #bd00ff; }
+
+.project-card-v2:hover .status-badge {
+    transform: scale(1.05);
+    border-color: rgba(0, 0, 0, 0.2);
+}
 
 .project-title-v2 {
     font-size: 1.8rem;
