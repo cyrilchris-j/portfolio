@@ -271,6 +271,47 @@
     box-shadow: 0 20px 60px rgba(6, 6, 6, 0.25);
 }
 
+/* Quiz Platform highlight */
+.highlight-quiz\ platform .card-stack-bg,
+[class*='highlight-quiz'] .card-stack-bg { 
+    background: rgba(99, 102, 241, 0.10); 
+    border-color: #6366f1; 
+}
+[class*='highlight-quiz']:hover .project-card-content { 
+    border-color: #6366f1 !important;
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25);
+}
+
+/* Productivity highlight */
+[class*='highlight-productivity'] .card-stack-bg { 
+    background: rgba(16, 185, 129, 0.10); 
+    border-color: #10b981; 
+}
+[class*='highlight-productivity']:hover .project-card-content { 
+    border-color: #10b981 !important;
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.25);
+}
+
+/* Innovative highlight */
+[class*='highlight-innovative'] .card-stack-bg { 
+    background: rgba(245, 158, 11, 0.10); 
+    border-color: #f59e0b; 
+}
+[class*='highlight-innovative']:hover .project-card-content { 
+    border-color: #f59e0b !important;
+    box-shadow: 0 20px 60px rgba(245, 158, 11, 0.25);
+}
+
+/* Featured highlight */
+[class*='highlight-featured'] .card-stack-bg { 
+    background: rgba(236, 72, 153, 0.10); 
+    border-color: #ec4899; 
+}
+[class*='highlight-featured']:hover .project-card-content { 
+    border-color: #ec4899 !important;
+    box-shadow: 0 20px 60px rgba(236, 72, 153, 0.25);
+}
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;

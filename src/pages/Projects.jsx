@@ -75,6 +75,10 @@ const ProjectCard = ({ project, idx }) => {
                         {project.highlightType === 'startup' && <div className="status-badge cyan">Featured</div>}
                         {project.highlightType === 'hackathon' && <div className="status-badge gold">SIH Solution</div>}
                         {project.highlightType === 'fintech' && <div className="status-badge purple">Prototype</div>}
+                        {project.highlightType === 'quiz' && <div className="status-badge indigo">Quiz Platform</div>}
+                        {project.highlightType === 'productivity' && <div className="status-badge green">Productivity</div>}
+                        {project.highlightType === 'innovative' && <div className="status-badge amber">AI Powered</div>}
+                        {project.highlightType === 'featured' && <div className="status-badge pink">Featured</div>}
                     </div>
                     
                     <h3 className="project-title-v2" style={{ transform: "translateZ(30px)" }}>{project.title}</h3>
@@ -126,42 +130,42 @@ const Projects = () => {
             title: "One Stop Alumni",
             desc: "Smart India Hackathon solution connecting college, alumni, and students for streamlined mentorship and networking.",
             tag: "SIH Solution / Web",
-            link: "https://cyrilchris-j.github.io/onestopalumni/",
-            github: "https://github.com/cyrilchris-j/onestopalumni",
+            link: "https://alumni-intrac--cyrilchrisj.replit.app",
+            github: "https://github.com/cyrilchris-j/Alumni-intrac",
             highlightType: "hackathon"
         },
        
         {
             title: "QuizSnap",
             desc: "Developed QuizSnap using React.js and modern frontend technologies to create an interactive real-time quiz platform with responsive design and smooth user experience.",
-            tag: "Utility / Tool",
+            tag: "Interactive Quiz",
             link: "https://quiz-snap.vercel.app/",
             github: "https://github.com/cyrilchris-j/QuizSnap",
-            highlightType: "utility"
+            highlightType: "quiz"
         },
          {
             title: "ExpenseTracker",
             desc: "Developed ExpenseTracker for real-time income and expense management with budgeting insights and transaction tracking.",
-            tag: "FinTech / Hackathon",
+            tag: "Budget Manager",
             link: "https://cyrilchris-j.github.io/expensetracker/",
             github: "https://github.com/cyrilchris-j/expensetracker",
-            highlightType: "fintech"
-        },
-        {
-            title: "Logi Voice Assistant",
-            desc: "Advanced AI-powered voice interface developed for TN Impact Solution, featuring real-time speech processing and intelligent task automation.",
-            tag: "AI/ML / Voice",
-            link: "https://logi-voice-assistant.vercel.app/",
-            github: "https://github.com/cyrilchris-j/LogiVoice-Assistant",
-            highlightType: "aiml"
+            highlightType: "productivity"
         },
         {
             title: "AI Roadmap Gen",
-            desc: "Logi is a voice-enabled AI assistant that interprets user commands and performs tasks seamlessly through natural interaction in real-time.",
-            tag: "AI / EdTech",
+            desc: "An AI-powered EdTech platform for managing notes, reminders, and daily academic tasks with a clean and responsive interface",
+            tag: "AI Career Tool",
+            link: "https://ai-roadmap-generator-ten.vercel.app/",
+            github: "https://github.com/cyrilchris-j/airoadgen",
+            highlightType: "innovative"
+        },
+        {
+            title: "Reminder",
+            desc: "A smart productivity web application that helps users manage notes, reminders, and daily schedules efficiently in one place",
+            tag: "Smart Notes App",
             link: "https://reminder-1-notes.web.app/",
             github: "https://github.com/cyrilchris-j/reminder",
-            highlightType: "startup"
+            highlightType: "featured"
         }
     ];
 
