@@ -239,8 +239,8 @@
 .modal-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
+    justify-content: flex-end;
+    padding: 12px 20px;
     border-bottom: 1px solid rgba(0, 229, 255, 0.25);
     background: rgba(240, 252, 255, 0.6);
     flex-shrink: 0;
