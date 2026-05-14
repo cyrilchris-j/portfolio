@@ -99,7 +99,11 @@ const Certificates = () => {
                             exit={{ scale: 0.8, opacity: 0, y: 50 }}
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <button className="close-modal" onClick={() => setSelectedCert(null)}>&times;</button>
+                            {/* Modal Header */}
+                            <div className="modal-header">
+                                <button className="close-modal" onClick={() => setSelectedCert(null)}>×</button>
+                            </div>
+
                             <div className="modal-body">
                                 <div className="modal-image-container">
                                     <img src={selectedCert.image} alt={selectedCert.title} />
