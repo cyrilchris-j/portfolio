@@ -32,7 +32,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2.5px solid #000;
+    border: 2.5px solid #90CAF9;
     border-radius: 24px;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background: var(--glass-bg);
@@ -64,19 +64,19 @@
     position: relative;
     height: 100%;
     padding: 35px;
-    border: 2.5px solid #000 !important;
+    border: 2.5px solid #90CAF9 !important;
     display: flex;
     flex-direction: column;
     gap: 18px;
     background: rgba(255, 255, 255, 0.98) !important;
     border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(144, 202, 249, 0.15);
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 /* Glow Effect on Hover */
 .project-card-v2:hover .project-card-content {
-    box-shadow: 0 20px 50px rgba(0, 119, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(144, 202, 249, 0.4);
 }
 
 .project-header {
@@ -118,27 +118,37 @@
     letter-spacing: 1.5px;
     display: flex;
     align-items: center;
-    background: #000;
+    background: #1a3a5c;
     color: #fff;
     border: 2px solid transparent;
     transform: skewX(-12deg);
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 6px 0px rgba(144, 202, 249, 0.2);
     position: relative;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.status-badge.cyan { border-color: #FFDAB9; color: #FFDAB9; }
-.status-badge.gold { border-color: #FFCBA4; color: #FFCBA4; }
-.status-badge.purple { border-color: #F8B88B; color: #F8B88B; }
-.status-badge.indigo { border-color: #a5b4fc; color: #a5b4fc; }
-.status-badge.green { border-color: #6ee7b7; color: #6ee7b7; }
-.status-badge.amber { border-color: #fcd34d; color: #fcd34d; }
-.status-badge.pink { border-color: #f9a8d4; color: #f9a8d4; }
+/* All badge colors unified to light peach */
+.status-badge.cyan,
+.status-badge.gold,
+.status-badge.purple,
+.status-badge.indigo,
+.status-badge.green,
+.status-badge.amber,
+.status-badge.pink { 
+    border-color: #FFDAB9; 
+    color: #FFDAB9; 
+}
 
-.project-card-v2:hover .status-badge.indigo { background: #a5b4fc; color: #000; }
-.project-card-v2:hover .status-badge.green { background: #6ee7b7; color: #000; }
-.project-card-v2:hover .status-badge.amber { background: #fcd34d; color: #000; }
-.project-card-v2:hover .status-badge.pink { background: #f9a8d4; color: #000; }
+.project-card-v2:hover .status-badge.cyan,
+.project-card-v2:hover .status-badge.gold,
+.project-card-v2:hover .status-badge.purple,
+.project-card-v2:hover .status-badge.indigo,
+.project-card-v2:hover .status-badge.green,
+.project-card-v2:hover .status-badge.amber,
+.project-card-v2:hover .status-badge.pink { 
+    background: #FFDAB9; 
+    color: #000; 
+}
 
 .status-badge::after {
     content: '';
@@ -199,18 +209,18 @@
 .primary-btn {
     flex: 1;
     padding: 14px 22px;
-    background: #000;
+    background: #1a3a5c;
     color: #fff;
     font-size: 0.95rem;
-    border: 2px solid #000;
+    border: 2px solid #90CAF9;
 }
 
 .github-btn {
     width: 52px;
     height: 52px;
     background: transparent;
-    color: #000;
-    border: 2px solid #000;
+    color: #1a3a5c;
+    border: 2px solid #90CAF9;
 }
 
 .btn-icon {
@@ -220,9 +230,9 @@
 
 .primary-btn:hover {
     background: #fff;
-    color: #000;
+    color: #1a3a5c;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(144, 202, 249, 0.3);
 }
 
 .primary-btn:hover .btn-icon {
@@ -230,10 +240,10 @@
 }
 
 .github-btn:hover {
-    background: #000;
+    background: #90CAF9;
     color: #fff;
     transform: translateY(-3px) rotate(12deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(144, 202, 249, 0.35);
 }
 
 .github-btn::after {
@@ -253,72 +263,36 @@
 }
 
 /* Highlight Variations - More intense colors */
-.highlight-startup .card-stack-bg { 
-    background: rgba(5, 5, 5, 0.12); 
-    border-color: #020303; 
-}
-.highlight-startup:hover .project-card-content { 
-    border-color: #010102 !important;
-    box-shadow: 0 20px 60px rgba(6, 6, 7, 0.25);
-}
-
-.highlight-hackathon .card-stack-bg { 
-    background: rgba(2, 1, 1, 0.12); 
-    border-color: #060504; 
-}
-.highlight-hackathon:hover .project-card-content { 
-    border-color: #090909 !important;
-    box-shadow: 0 20px 60px rgba(7, 7, 6, 0.25);
-}
-
+/* All card highlight types unified to light peach */
+.highlight-startup .card-stack-bg,
+.highlight-hackathon .card-stack-bg,
 .highlight-fintech .card-stack-bg { 
-    background: rgba(3, 3, 4, 0.12); 
-    border-color: #030203; 
+    background: rgba(255, 218, 185, 0.15); 
+    border-color: #FFDAB9; 
 }
+
+.highlight-startup:hover .project-card-content,
+.highlight-hackathon:hover .project-card-content,
 .highlight-fintech:hover .project-card-content { 
-    border-color: #050405 !important;
-    box-shadow: 0 20px 60px rgba(6, 6, 6, 0.25);
+    border-color: #FFDAB9 !important;
+    box-shadow: 0 20px 60px rgba(255, 180, 140, 0.25);
 }
 
-/* Quiz Platform highlight */
-.highlight-quiz\ platform .card-stack-bg,
-[class*='highlight-quiz'] .card-stack-bg { 
-    background: rgba(99, 102, 241, 0.10); 
-    border-color: #6366f1; 
-}
-[class*='highlight-quiz']:hover .project-card-content { 
-    border-color: #6366f1 !important;
-    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25);
-}
-
-/* Productivity highlight */
-[class*='highlight-productivity'] .card-stack-bg { 
-    background: rgba(16, 185, 129, 0.10); 
-    border-color: #10b981; 
-}
-[class*='highlight-productivity']:hover .project-card-content { 
-    border-color: #10b981 !important;
-    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.25);
-}
-
-/* Innovative highlight */
-[class*='highlight-innovative'] .card-stack-bg { 
-    background: rgba(245, 158, 11, 0.10); 
-    border-color: #f59e0b; 
-}
-[class*='highlight-innovative']:hover .project-card-content { 
-    border-color: #f59e0b !important;
-    box-shadow: 0 20px 60px rgba(245, 158, 11, 0.25);
-}
-
-/* Featured highlight */
+/* All highlight types unified to light peach */
+[class*='highlight-quiz'] .card-stack-bg,
+[class*='highlight-productivity'] .card-stack-bg,
+[class*='highlight-innovative'] .card-stack-bg,
 [class*='highlight-featured'] .card-stack-bg { 
-    background: rgba(236, 72, 153, 0.10); 
-    border-color: #ec4899; 
+    background: rgba(255, 218, 185, 0.15); 
+    border-color: #FFDAB9; 
 }
+
+[class*='highlight-quiz']:hover .project-card-content,
+[class*='highlight-productivity']:hover .project-card-content,
+[class*='highlight-innovative']:hover .project-card-content,
 [class*='highlight-featured']:hover .project-card-content { 
-    border-color: #ec4899 !important;
-    box-shadow: 0 20px 60px rgba(236, 72, 153, 0.25);
+    border-color: #FFDAB9 !important;
+    box-shadow: 0 20px 60px rgba(255, 180, 140, 0.25);
 }
 
 @media (max-width: 768px) {

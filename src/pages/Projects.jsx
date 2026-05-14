@@ -73,12 +73,12 @@ const ProjectCard = ({ project, idx }) => {
                     <div className="project-header" style={{ transform: "translateZ(40px)" }}>
                         <span className="project-tag-v2">{project.tag}</span>
                         {project.highlightType === 'startup' && <div className="status-badge cyan">Featured</div>}
-                        {project.highlightType === 'hackathon' && <div className="status-badge gold">SIH Solution</div>}
+                        {project.highlightType === 'hackathon' && <div className="status-badge gold">SIH</div>}
                         {project.highlightType === 'fintech' && <div className="status-badge purple">Prototype</div>}
-                        {project.highlightType === 'quiz' && <div className="status-badge indigo">Quiz Platform</div>}
-                        {project.highlightType === 'productivity' && <div className="status-badge green">Productivity</div>}
-                        {project.highlightType === 'innovative' && <div className="status-badge amber">AI Powered</div>}
-                        {project.highlightType === 'featured' && <div className="status-badge pink">Featured</div>}
+                        {project.highlightType === 'quiz' && <div className="status-badge indigo">Quiz</div>}
+                        {project.highlightType === 'productivity' && <div className="status-badge green">Budget</div>}
+                        {project.highlightType === 'innovative' && <div className="status-badge amber">AI</div>}
+                        {project.highlightType === 'featured' && <div className="status-badge pink">Notes</div>}
                     </div>
                     
                     <h3 className="project-title-v2" style={{ transform: "translateZ(30px)" }}>{project.title}</h3>
@@ -120,7 +120,7 @@ const Projects = () => {
     const projects = [
         {
             title: "Napalgo",
-            desc: "Next-gen student-driven IT initiative focused on real-world innovation and solutions.",
+            desc: "A next-generation student-driven IT initiative focused on building innovative digital solutions and real-world tech projects.",
             tag: "Startup / IT",
             link: "https://cyrilchris-j.github.io/napalgo/",
             github: "https://github.com/cyrilchris-j/napalgo",
@@ -137,7 +137,7 @@ const Projects = () => {
        
         {
             title: "QuizSnap",
-            desc: "Developed QuizSnap using React.js and modern frontend technologies to create an interactive real-time quiz platform with responsive design and smooth user experience.",
+            desc: "An interactive real-time quiz platform built for seamless gameplay, responsive performance, and engaging user experience",
             tag: "Interactive Quiz",
             link: "https://quiz-snap.vercel.app/",
             github: "https://github.com/cyrilchris-j/QuizSnap",
