@@ -130,6 +130,15 @@
 .status-badge.cyan { border-color: #FFDAB9; color: #FFDAB9; }
 .status-badge.gold { border-color: #FFCBA4; color: #FFCBA4; }
 .status-badge.purple { border-color: #F8B88B; color: #F8B88B; }
+.status-badge.indigo { border-color: #a5b4fc; color: #a5b4fc; }
+.status-badge.green { border-color: #6ee7b7; color: #6ee7b7; }
+.status-badge.amber { border-color: #fcd34d; color: #fcd34d; }
+.status-badge.pink { border-color: #f9a8d4; color: #f9a8d4; }
+
+.project-card-v2:hover .status-badge.indigo { background: #a5b4fc; color: #000; }
+.project-card-v2:hover .status-badge.green { background: #6ee7b7; color: #000; }
+.project-card-v2:hover .status-badge.amber { background: #fcd34d; color: #000; }
+.project-card-v2:hover .status-badge.pink { background: #f9a8d4; color: #000; }
 
 .status-badge::after {
     content: '';
