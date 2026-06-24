@@ -90,7 +90,7 @@ const About = () => {
                             >
                                 <div className="journey-card-premium glass-card">
                                     <div className="journey-badge">Higher Sec</div>
-                                    <span className="journey-year">2022 - 2024</span>
+                                    <span className="journey-year">2023 - 2024</span>
                                     <h4 className="journey-school">HSC</h4>
                                     <p className="journey-institution">Infant Jesus Matric Hr Sec School</p>
                                     <p className="journey-desc">Strengthened analytical skills with a interest in technology.</p>
@@ -105,7 +105,7 @@ const About = () => {
                             >
                                 <div className="journey-card-premium glass-card">
                                     <div className="journey-badge">Schooling</div>
-                                    <span className="journey-year">2020 - 2022</span>
+                                    <span className="journey-year">2021 - 2022</span>
                                     <h4 className="journey-school">SSLC</h4>
                                     <p className="journey-institution">Infant Jesus Matric Hr Sec School</p>
                                     <p className="journey-desc">Developed a strong academic foundation with emphasis on discipline.</p>

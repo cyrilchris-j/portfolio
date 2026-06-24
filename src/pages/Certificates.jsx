@@ -16,7 +16,7 @@ const Certificates = () => {
         {
             title: "CredTech Hackathon — Certificate of Excellence",
             issuer: "IIT Kanpur",
-            date: "2024",
+            date: "2025",
             image: iitKanpur,
             description: "Participated in Round 1 — Problem Solving Round of the CredTech Hackathon organized by IIT Kanpur, as Team Napalgo from KSR College of Engineering."
         },
