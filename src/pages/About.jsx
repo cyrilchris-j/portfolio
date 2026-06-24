@@ -19,16 +19,16 @@ const About = () => {
                                     <div className="info-header">
                                         <h2 className="info-name">Cyril Christopher J</h2>
                                         <p className="prof-summary">
-                                            AI/ML-driven UI/UX Designer focused on building intelligent, scalable digital products. I combine user research, frontend engineering, and data-driven insights to solve real-world problems.
+                                            Driven by curiosity and a passion for technology, I enjoy creating meaningful digital experiences through Full Stack Development, UI/UX Design, and Artificial Intelligence. I continuously learn, build projects, and explore emerging technologies to solve real-world problems and improve my technical expertise.
                                         </p>
                                     </div>
 
                                     <div className="info-section">
                                         <h3 className="info-section-title">Core Expertise</h3>
                                         <ul className="expertise-list">
-                                            <li><strong>UI/UX Design</strong> (Figma, User Research, Prototyping)</li>
-                                            <li><strong>Frontend Development</strong> (React, HTML, CSS, JS)</li>
-                                            <li><strong>AI/ML Integration</strong> (Python, Firebase, APIs)</li>
+                                            <li><strong>Full Stack Web Development</strong> (React.js, JavaScript, Firebase, MongoDB)</li>
+                                            <li><strong>UI/UX Design</strong> (Figma, Wireframing, Prototyping, User-Centered Design)</li>
+                                            <li><strong>AI/ML Integration</strong> (Python, APIs, AI Tools, Intelligent Applications)</li>
                                         </ul>
                                     </div>
 
@@ -36,18 +36,20 @@ const About = () => {
                                         <div className="info-section">
                                             <h3 className="info-section-title">Key Strengths</h3>
                                             <ul className="capsule-list">
-                                                <li>Problem Solving</li>
-                                                <li>Modern UI Systems</li>
-                                                <li>Fast Learner</li>
-                                                <li>Strong Collaborator</li>
+                                                <li>Problem Solving & Critical Thinking</li>
+                                                <li>Fast Learner with Growth Mindset</li>
+                                                <li>Team Collaboration & Comm.</li>
+                                                <li>Attention to UX</li>
                                             </ul>
                                         </div>
                                         <div className="info-section">
                                             <h3 className="info-section-title">Highlights</h3>
                                             <ul className="capsule-list">
-                                                <li>Hackathon Participant</li>
-                                                <li>Real-world UI/UX Projects</li>
-                                                <li>Emerging Tech Trends</li>
+                                                <li>Active Hackathon Participant</li>
+                                                <li>AI-Powered Apps</li>
+                                                <li>Full Stack Dev Experience</li>
+                                                <li>Modern UI/UX Projects</li>
+                                                <li>Continuous Learning in AI</li>
                                             </ul>
                                         </div>
                                     </div>

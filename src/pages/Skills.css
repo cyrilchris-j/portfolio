@@ -93,22 +93,25 @@
 }
 
 .skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 }
 
 .skill-tag {
     background: rgba(255, 255, 255, 0.4); /* light glass tint */
     border: 1px solid rgba(0, 229, 255, 0.6); /* neon border */
-    padding: 8px 16px;
+    padding: 6px 8px;
     border-radius: 50px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-primary);
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .skill-card-wrapper:hover .skill-tag {

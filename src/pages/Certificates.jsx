@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Certificates.css";
 import iitKanpur from "../assets/iitkanpurhackathon.jpeg";
 import iitDataScience from "../assets/iitdatascienceworkshop.jpeg";
-import gfg from "../assets/gfgpython.jpeg";
+
 import kpr from "../assets/kprprompteng.jpeg";
 import nptel from "../assets/npteliot.jpeg";
 import uiuxcert from "../assets/uiuxcert.jpeg";
@@ -27,13 +27,7 @@ const Certificates = () => {
             image: iitDataScience,
             description: "Participated in a Data Science workshop at IIT Madras, organized by Techgyan Technologies. Certificate No: T-IITM-087."
         },
-        {
-            title: "Free Python Course — Certificate of Completion",
-            issuer: "GeeksforGeeks",
-            date: "2025",
-            image: gfg,
-            description: "Completed the 3-week Free Python Course (Updated 2025) on GeeksforGeeks, certified by Sandeep Jain, Founder & CEO."
-        },
+
         {
             title: "Intro to IoT — Elite Certification",
             issuer: "NPTEL · IIT Kharagpur",

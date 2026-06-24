@@ -1,34 +1,48 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './PillNav.css';
 
 const PillNav = () => {
     const [hovered, setHovered] = useState(null);
+    const navigate = useNavigate();
 
     const items = [
         {
             id: 'cv',
-            label: 'Download CV',
+            label: 'Download Resume',
             href: '/Cyril Christopher J -- Resume .pdf',
-            download: true,
-            icon: (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-            )
+            download: true
         },
         {
-            id: 'email',
-            label: 'Email Me',
-            href: 'mailto:cyrilchrisj@gmail.com',
-            icon: (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-            )
+            id: 'projects',
+            label: 'View Projects',
+            action: (e) => {
+                e.preventDefault();
+                if (window.innerWidth <= 968) {
+                    const element = document.getElementById('projects');
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } else {
+                    navigate('/projects');
+                }
+            }
+        },
+        {
+            id: 'contact',
+            label: 'Contact Me',
+            action: (e) => {
+                e.preventDefault();
+                if (window.innerWidth <= 968) {
+                    const element = document.getElementById('contact');
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } else {
+                    navigate('/contact');
+                }
+            }
         }
     ];
 
@@ -38,11 +52,12 @@ const PillNav = () => {
                 {items.map((item) => (
                     <a
                         key={item.id}
-                        href={item.href}
+                        href={item.href || '#'}
                         download={item.download}
                         className="pill-link"
                         onMouseEnter={() => setHovered(item.id)}
                         onMouseLeave={() => setHovered(null)}
+                        onClick={item.action ? item.action : undefined}
                     >
                         {hovered === item.id && (
                             <motion.div

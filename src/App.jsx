@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import WatercolorBackground from "./components/WatercolorBackground";
-import SocialIcons from "./components/SocialIcons";
 import Footer from "./components/Footer";
 
 // Pages
@@ -78,7 +77,6 @@ function App() {
           )}
         </main>
 
-        <SocialIcons />
         <Footer />
       </div>
     </Router>

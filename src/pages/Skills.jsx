@@ -3,16 +3,16 @@ import "./Skills.css";
 const Skills = () => {
     const skillGroups = [
         {
-            title: "Languages",
-            skills: ["Python", "JavaScript", "C", "Java", "SQL", "HTML", "CSS"]
+            title: "Frontend & Backend",
+            skills: ["React", "Next.js", "Tailwind", "Node.js", "Express"]
         },
         {
-            title: "Frameworks",
-            skills: ["React", "TensorFlow", "Vite", "Node.js", "Express", "PyTorch"]
+            title: "Programming & Database",
+            skills: ["Java", "Python", "C", "Firebase", "MongoDB", "Supabase"]
         },
         {
             title: "Tools",
-            skills: ["Github", "Excel", "Vercel/Netlify", "Figma", "Canva", "VS Code"]
+            skills: ["Git", "GitHub", "Figma", "Stitch", "Antigravity", "Netlify"]
         }
     ];
 

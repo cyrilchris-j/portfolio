@@ -86,11 +86,15 @@ const ProjectCard = ({ project, idx }) => {
                     
                     <div className="project-footer" style={{ transform: "translateZ(50px)" }}>
                         <a
-                            href={project.link || "#"}
-                            target={project.link === "#" ? "_self" : "_blank"}
+                            href={project.link !== "#" ? project.link : "#"}
+                            target={project.link !== "#" ? "_blank" : "_self"}
                             rel="noopener noreferrer"
                             className="project-btn-v2 primary-btn"
-                            onClick={(e) => { if (project.link === "#") e.preventDefault(); }}
+                            onClick={(e) => { 
+                                if (project.link === "#") {
+                                    e.preventDefault();
+                                }
+                            }}
                         >
                             <span className="btn-text">
                                 {project.link === "#" ? "Coming Soon" : "Live Demo"}

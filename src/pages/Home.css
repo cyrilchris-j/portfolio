@@ -211,9 +211,14 @@
 
     .name-title {
         font-size: clamp(1.5rem, 6vw, 2.4rem);
-        white-space: nowrap;
+        white-space: normal;
         width: 100%;
-        overflow-x: visible;
+        overflow-x: hidden;
+    }
+    
+    .home-page {
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .description {

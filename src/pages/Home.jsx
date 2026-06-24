@@ -6,34 +6,10 @@ import cyrilImg from "../assets/cyrilhome.jpg";
 import "./Home.css";
 
 const Home = () => {
-    const roleText = "AI/ML and UI/UX Designer";
-    const [decryptedText, setDecryptedText] = useState("");
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*";
+    const roleText = "Full Stack Developer | UI/UX Designer";
 
     const greetingText = "Hello, my name is";
     const nameText = "Cyril Christopher J";
-
-    useEffect(() => {
-        let iteration = 0;
-        const interval = setInterval(() => {
-            setDecryptedText(
-                roleText.split("").map((char, index) => {
-                    if (index < iteration) {
-                        return roleText[index];
-                    }
-                    return characters[Math.floor(Math.random() * characters.length)];
-                }).join("")
-            );
-
-            if (iteration >= roleText.length) {
-                clearInterval(interval);
-            }
-
-            iteration += 1 / 3;
-        }, 30);
-
-        return () => clearInterval(interval);
-    }, []);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -103,10 +79,10 @@ const Home = () => {
                         </div>
                     </motion.div>
 
-                    <h3 className="role-title">{decryptedText}</h3>
+                    <h3 className="role-title">{roleText}</h3>
                     <p className="description">
-                        Passionate about building intelligent systems and crafting seamless digital experiences.
-                        Blending the power of Artificial Intelligence with the elegance of modern design to solve complex problems.
+                        I am a third-year Computer Science student passionate about AI, Full Stack Development and UI/UX Design.<br/><br/>
+                        I have built 10+ projects using React, Firebase, MongoDB and modern web technologies. I actively participate in hackathons and continuously explore Artificial Intelligence and Machine Learning.
                     </p>
 
                     <PillNav />
